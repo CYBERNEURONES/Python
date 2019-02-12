@@ -4,8 +4,10 @@
 # Licence : OPEN BAR :)
 #
 
+JOPLIN : https://joplin.cozic.net/
+
 Python : 
-  REST API JOPLIN : 
+  REST API JOPLIN : https://joplin.cozic.net/api/
 
 Script 1 : DiaroToJoplin.py : Import Diaro Backup to Joplin (REST API).
  More information : http://www.cyber-neurones.org/2019/02/diaro-app-pixel-crater-ltd-diarobackup-xml-how-to-migrate-data-to-joplin/ 

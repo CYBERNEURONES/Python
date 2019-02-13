@@ -21,3 +21,11 @@ Script 3 : WordpressToJopin.py : Import Wordpress RSS to Joplin (REST API).
  More information : http://www.cyber-neurones.org/2019/02/how-to-import-data-of-wordpress-feed-rss-to-joplin/ 
  Test with Python 3 and Mac OS.
 
+Script 4 : JoplinToGoogleMap.py (with REST API and gmplot) : Put plot of notes (with lat and long) on Google Map.
+ More information : http://www.cyber-neurones.org/2019/02/joplin-python-gmplot-google-map-how-to-create-a-maps-with-rest-api-and-data-in-joplin/ 
+ Test with Python 3 and Mac OS.
+
+Script 5 : JoplinToStaticMap.py (with REST API and gmplot) : Put plot of notes (with lat and long)  on static map and create a PNG. 
+ More information : http://www.cyber-neurones.org/2019/02/joplin-python-static-map-how-to-create-a-maps-jpeg-with-rest-api-and-data-in-joplin/ 
+ Test with Python 3 and Mac OS. 
+

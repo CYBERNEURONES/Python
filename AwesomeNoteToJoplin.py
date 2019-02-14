@@ -1,4 +1,10 @@
-
+#
+# Version 1 
+# for Python 3
+# 
+#   ARIAS Frederic
+#   Sorry ... It's difficult for me the python :)
+#
 
 import plistlib
 import os

@@ -29,3 +29,11 @@ Script 5 : JoplinToStaticMap.py (with REST API and gmplot) : Put plot of notes (
  More information : http://www.cyber-neurones.org/2019/02/joplin-python-static-map-how-to-create-a-maps-jpeg-with-rest-api-and-data-in-joplin/ 
  Test with Python 3 and Mac OS. 
 
+Script 6 : JoplinToWorldCloudBody.py : 
+
+
+Script 7 : JoplinToWorldCloudTitle.py :
+
+
+
+

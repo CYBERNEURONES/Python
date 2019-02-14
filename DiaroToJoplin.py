@@ -16,11 +16,12 @@ import os
 strftime("%Y-%m-%d %H:%M:%S", gmtime())
 start = time.time()
 
-#Token
+#IP
 ip = "127.0.0.1"
+#Port
 port = "41184"
-#token = "ABCD123ABCD123ABCD123ABCD123ABCD123"
-token = "bcf7475af70806df3e0b88dd10fcf88971e7088e3116e754e08d8a526ceeaeeb3d95d424330aab10c283eeddb7fc9f24c95472af626c03980eedfbb8d514cdeb"
+#Token
+token = "Put your token here"
 nb_import = 0;
 headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
 

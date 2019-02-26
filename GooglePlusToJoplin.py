@@ -1,11 +1,10 @@
 #
-# Version 1 
+# Version 3 
 # for Python 3
 # 
 #   ARIAS Frederic
 #   Sorry ... It's difficult for me the python :)
 #
-
 
 from os import listdir
 from pathlib import Path
@@ -60,7 +59,7 @@ date = datetime.strptime('2017-05-04',"%Y-%m-%d")
 ip = "127.0.0.1"
 port = "41184"
 
-token = "Put your token here"
+token = "Put the token here"
 nb_import = 0;
 headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
 
@@ -114,6 +113,15 @@ for csvfilename in glob.iglob('Takeout*/**/*.metadata.csv', recursive=True):
   myfilename = mylist[0] + "." + mylist[1]
   filename = os.path.dirname(csvfilename)+"/"+myfilename
   my_file = Path(filename)
+
+  myfilename2 = mylist[0] + "." + mylist[1] + ".jpg"
+  filename2 = os.path.dirname(csvfilename)+"/"+myfilename2
+  my_file2 = Path(filename2)
+
+  myfilename3 = mylist[0] + ".jpg"
+  filename3 = os.path.dirname(csvfilename)+"/"+myfilename3
+  my_file3 = Path(filename3)
+
   with open(csvfilename) as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
@@ -207,6 +215,60 @@ for csvfilename in glob.iglob('Takeout*/**/*.metadata.csv', recursive=True):
                   print('bad json: ', resp)
 
                mybody = row['description'] + "\n  ![" + myfilename + "](:/" + myuid_picture + ")   \n";
+
+               payload_note_put = {
+                "body":mybody
+                }
+
+               try:
+                  resp = requests.put(url_notes_put, json=payload_note_put)
+                  resp.raise_for_status()
+                  resp_dict = resp.json()
+                  print(resp_dict)
+               except requests.exceptions.HTTPError as e:
+                  print("Bad HTTP status code:", e)
+               except requests.exceptions.RequestException as e:
+                  print("Network error:", e)
+
+            if my_file2.is_file():
+               cmd = "curl -F 'data=@"+filename2+"' -F 'props={\"title\":\""+myfilename2+"\"}' http://"+ip+":"+port+"/resources?token="+token
+               print("Command"+cmd)
+               resp = os.popen(cmd).read()
+               try:
+                  respj = json.loads(resp)
+                  print(respj['id'])
+                  myuid_picture= respj['id']
+               except:
+                  print('bad json: ', resp)
+
+               mybody = row['description'] + "\n  ![" + myfilename2 + "](:/" + myuid_picture + ")   \n";
+
+               payload_note_put = {
+                "body":mybody
+                }
+
+               try:
+                  resp = requests.put(url_notes_put, json=payload_note_put)
+                  resp.raise_for_status()
+                  resp_dict = resp.json()
+                  print(resp_dict)
+               except requests.exceptions.HTTPError as e:
+                  print("Bad HTTP status code:", e)
+               except requests.exceptions.RequestException as e:
+                  print("Network error:", e)
+
+            if my_file3.is_file():
+               cmd = "curl -F 'data=@"+filename3+"' -F 'props={\"title\":\""+myfilename3+"\"}' http://"+ip+":"+port+"/resources?token="+token
+               print("Command"+cmd)
+               resp = os.popen(cmd).read()
+               try:
+                  respj = json.loads(resp)
+                  print(respj['id'])
+                  myuid_picture= respj['id']
+               except:
+                  print('bad json: ', resp)
+
+               mybody = row['description'] + "\n  ![" + myfilename3 + "](:/" + myuid_picture + ")   \n";
 
                payload_note_put = {
                 "body":mybody

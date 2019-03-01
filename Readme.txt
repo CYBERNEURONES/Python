@@ -29,11 +29,17 @@ Script 5 : JoplinToStaticMap.py (with REST API and gmplot) : Put plot of notes (
  More information : http://www.cyber-neurones.org/2019/02/joplin-python-static-map-how-to-create-a-maps-jpeg-with-rest-api-and-data-in-joplin/ 
  Test with Python 3 and Mac OS. 
 
-Script 6 : JoplinToWorldCloudBody.py : 
+Script 6 : JoplinToWorldCloudBody.py : (with REST API)
+ 
 
+Script 7 : JoplinToWorldCloudTitle.py : (with REST API)
+ 
 
-Script 7 : JoplinToWorldCloudTitle.py :
+Script 8 : JoplinCheckRessources.py :  (with REST API)
+ 
 
-
-
+Script 9 : JoplinCleanRessource.py : (with REST API)
+ Clean ressource not used in JOPLIN.
+ More information : http://www.cyber-neurones.org/2019/03/python-how-to-clean-ressources-of-joplin-not-used/ 
+ Test with Python 3 and Mac OS.
 
